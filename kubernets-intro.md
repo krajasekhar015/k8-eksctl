@@ -126,3 +126,7 @@ kubectl get nodes
 ```
 eksctl delete cluster --config-file=eks.yaml
 ```
+or
+```
+eksctl delete cluster --region=us-east-1 --name=expense
+```
