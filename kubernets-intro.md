@@ -1,9 +1,9 @@
-**What is Orchestration?**
+**What is Orchestration?** <br>
 If suppose one person has 100 PGs --> He need a person to manage all at a time 
 - One host is not enough to manage 1000s of containers. So, for this we need a Orchestration tool
     - Kubernetes is the Orchestration tool 
 
-**what is Kubernetes?**
+**what is Kubernetes?** 
 - Kubernetes is by nature highly available, fault tolerent, and self healing.
 - It is a Orchestration platform 
 - Running the multiple containers 
@@ -35,11 +35,11 @@ If suppose one person has 100 PGs --> He need a person to manage all at a time
 4. Install `kubectl`
     - Go to AWS official documentation 
     ```
-    https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html`
+    https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
     ```
     and download linux (amd64) file
     ```
-    curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.31.0/2024-09-12/bin/linux/amd64/kubectl`
+    curl -O https://s3.us-west-2.amazonaws.com/amazon-eks/1.31.0/2024-09-12/bin/linux/amd64/kubectl
     ```
     - After downloading, make the `kubectl` binary executable using the following command
     ```
