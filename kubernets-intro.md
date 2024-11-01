@@ -120,7 +120,31 @@ eksctl create cluster --config-file=eks.yaml
 ```
 kubectl get nodes
 ```
-![alt text](images/image.png)
+![alt text](images/get-nodes.png)
+
+Sometime, the error message pops that `kubectl` is trying to connect to a Kubernetes API server running on `localhost:8080`, but it can't establish the connection. The issue might stem from your kubeconfig setup
+
+![alt text](images/get-nodes-error.png)
+
+- Simply, we can update the configuration file using the command:
+```
+aws eks update-kubeconfig --name your-cluster-name --region your-region
+```
+
+- Check for cluster status:
+```
+aws eks describe-cluster --name your-cluster-name --region your-region
+```
+
+- Check kubeconfig context, Verify that your kubeconfig is pointing to the correct context:
+```
+kubectl config current-context
+```
+
+- If it's not set to your EKS context, you can set it with:
+```
+kubectl config use-context your-eks-context
+```
 
 - To delete cluster:
 ```
